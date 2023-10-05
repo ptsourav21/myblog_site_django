@@ -1,5 +1,60 @@
-{%extends "base.html"%}
-{% block title %}My Blog{% endblock  %}
+{%extends "base.html"%} 
+{%load static%}
+{% block title %}
+My Blog
+{% endblock%}  
+{% block css_files %}
+    <link rel="stylesheet" href="{%static "blog/index.css"%}">
+{% endblock %}
+
+
+
 {% block content %}
-    <h1>Welcome to my blog</h1>
+
+<header id="main-navigation">
+  <h1><a href="">Purnendu's Blog</a></h1>
+  <nav>
+    <a href="">All Posts</a>
+  </nav>
+</header>
+
+<section id="welcome">
+  <header>
+    <img src="" alt="Purnendu - The author of this blog" />
+    <h2>Purnendu's Blog</h2>
+  </header>
+  <p>Hi, I'm Purnendu and I love to talk about tech world!</p>
+</section>
+
+<section id="latest-posts">
+  <h2>My Latest Thouhghts</h2>
+  <ul>
+    <li>
+      <article class="post">
+        <a href="">
+          <img src="" alt="Mountain Hiking" />
+          <div class="post__content">
+            <h3>Mountain Hiking</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam,
+              ipsam facilis sequi dolor ut voluptate, cum placeat quasi eveniet,
+              odio ducimus harum vitae veritatis facere voluptatibus!
+            </p>
+          </div>
+        </a>
+      </article>
+    </li>
+  </ul>
+</section>
+<section id="about">
+  <h2>What I Do</h2>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam nesciunt
+    pariatur officia ab aspernatur eaque ipsum aliquid? Iusto, at omnis?
+  </p>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, neque.
+    Adipisci possimus pariatur aspernatur vel?
+  </p>
+</section>
 {% endblock content %}
